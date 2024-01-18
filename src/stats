@@ -1,0 +1,20 @@
+BAND HIGH
+RATIO 0.2
+
+PYTHON
+start transform
+shape :  (256, 256, 3)
+width :  256
+create balanced mask
+x_start  192 ystart  192 x_end  256 y_end  256
+num_freq :  820
+
+
+RUST
+create balanced mask
+ xstart 192
+ y_start 192
+ send 256
+ yend 256
+
+num freq 0 : 820

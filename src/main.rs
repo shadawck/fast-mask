@@ -79,14 +79,12 @@ fn process_folder(
 
     // Process the input based on whether it's a file or a directory
     let input_path_buf = PathBuf::from(input_folder);
-    println!("input path buf {:#?}", input_path_buf);
-    println!("Output foldser {:#?}", output_folder);
 
     if input_path_buf.is_file() {
         let progress_bar = ProgressBar::new(1);
         progress_bar.set_style(
             ProgressStyle::default_bar()
-                .template("[{elapsed_precise}] [{wide_bar}] {pos}/{len}")
+                .template("[{elapsed_precise}] [{bar:40.cyan/blue}] {pos}/{len} {wide_msg}")
                 .unwrap(),
         );
 
